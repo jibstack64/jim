@@ -24,9 +24,6 @@ reset
 INDENT = 4
 FP = "~/.jim/database.json" if UNIX else "database.json"
 
-if UNIX and not os.path.exists("~/.jim"):
-    os.mkdir("~/.jim")
-
 # initialise colorama
 colorama.init(convert=not UNIX)
 
