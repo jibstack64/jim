@@ -14,6 +14,6 @@ Not meant to be used seriously - use an online service, or something (no, seriou
 - `reset` -> resets all data
 
 ### Install
-If you're on *nix (preferably Linux) you can `chmod +x` the `jim.sh` script and create a link to it in your `.local/bin` or other location. I also recommend that you create a `~/.jim` directory and move the contents of the cloned `jim` folder there. It just means that you don't have a random `jim` folder in your machine.
+If you're on *nix (preferably Linux) you can `chmod +x` and run the `install.sh` script.
 
 If you're on Windows, you will have to just use a normal directory somewhere in your `Documents`.
