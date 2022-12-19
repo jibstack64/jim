@@ -1,5 +1,8 @@
 # jim
 
+![GitHub](https://img.shields.io/github/license/jibstack64/jim)
+![Coolness](https://img.shields.io/badge/coolness-100%25-yellowgreen)
+
 A calorie and weight logger I made for my personal gymventures.
 
 Not meant to be used seriously - use an online service, or something (no, seriously, I made this in half an hour).
