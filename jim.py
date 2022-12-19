@@ -15,7 +15,7 @@ import os
 
 UNIX = os.name != "nt"
 if UNIX:
-    os.chdir("~/.jim")
+    os.chdir(os.path.expanduser("~/.jim/database.json"))
 HELP = """help
   -> prints this help string.
 log {calories} [weight (kg)]
