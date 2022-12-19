@@ -12,9 +12,7 @@ import json
 import sys
 import os
 
-# initialise colorama
-colorama.init(convert=True if os.name == "nt" else False)
-
+UNIX = os.name != "nt"
 HELP = """help
   -> prints this help string.
 log {calories} [weight (kg)]
@@ -24,7 +22,10 @@ read
 reset
   -> resets all data."""
 INDENT = 4
-FP = "database.json"
+FP = "~/.jim/database.json" if UNIX else "database.json"
+
+# initialise colorama
+colorama.init(convert=not UNIX)
 
 def pretty(text: str, error: bool = False, override: str = None):
     print(((Colour.RED if error else Colour.GREEN) if override == None else override) + text + Colour.RESET)
