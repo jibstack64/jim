@@ -7,6 +7,10 @@ A calorie and weight logger I made for my personal gymventures.
 
 Not meant to be used seriously - use an online service, or something (no, seriously, I made this in half an hour).
 
+> ![screenshot-2022-12-19-19:56:32](https://user-images.githubusercontent.com/107510599/208509618-b2b5d795-b75c-47fe-a441-4eef7e0676d0.png)
+>
+> Of course, you would not log your calories multiple times a day, but you get the point.
+
 ### Arguments
 - `help` -> duh.
 - `log {calories} [weight (kg)]` -> associates the current date and time with the calorie count and weight provided.
