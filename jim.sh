@@ -1,2 +1,2 @@
 shift
-python ~/.jim/jim.sh $@
+python ~/.jim/jim.py $@
