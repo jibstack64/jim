@@ -14,4 +14,4 @@ Not meant to be used seriously - use an online service, or something (no, seriou
 - `reset` -> resets all data
 
 ### Install
-If you're on *nix (preferably Linux) you can use the `install.sh` script. Otherwise, you will have to just use a normal directory somewhere in your `Documents`.
+If you're on *nix (preferably Linux) you can `chmod +x` the `jim.sh` script and create a link to it in your `.local/bin` or other location. Otherwise, you will have to just use a normal directory somewhere in your `Documents`.
