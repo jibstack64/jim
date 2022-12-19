@@ -1,1 +1,1 @@
-python jim.sh $@
+python ~/.jim/jim.sh $@
