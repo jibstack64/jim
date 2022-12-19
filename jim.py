@@ -12,7 +12,10 @@ import json
 import sys
 import os
 
+
 UNIX = os.name != "nt"
+if UNIX:
+    os.chdir("~/.jim")
 HELP = """help
   -> prints this help string.
 log {calories} [weight (kg)]
@@ -22,7 +25,7 @@ read
 reset
   -> resets all data."""
 INDENT = 4
-FP = "~/.jim/database.json" if UNIX else "database.json"
+FP = "database.json"
 
 # initialise colorama
 colorama.init(convert=not UNIX)
