@@ -83,16 +83,34 @@ else:
             exit(1)
         changeitup = {}
         print() # nl
+        cals_total = 0
+        cals_num = 0
+        wts_high = 0
+        wts_low = 0
         for d in data.copy():
             if changeitup.get(d["date"]) == None:
                 changeitup[d["date"]] = []
+            if wts_low == 0:
+                wts_low = d["weight"]
+            if d["weight"] > wts_high:
+                wts_high = d["weight"]
+            if d["weight"] < wts_low and d["weight"] > 0:
+                wts_low = d["weight"]
+            cals_num += 1
+            cals_total += d["calories"]
             changeitup[d["date"]].append(d)
+            cals_total
             changeitup[d["date"]][-1].pop("date")
         for date, logs in changeitup.items():
             pretty(f"-> {date}", False, Colour.LIGHTMAGENTA_EX + Funk.BRIGHT)
             for l in logs:
                 pretty(f"  Calories: {l['calories']} - Weight: {l['weight']} - Time: {l['time']}", False, Colour.LIGHTCYAN_EX)
             print() # another nl
+        pretty("Average calorie intake:", False, Colour.CYAN)
+        pretty(f" ---===+ {cals_total/cals_num} +===---")
+        pretty("You have lost:", False, Colour.CYAN)
+        pretty(f" -=+ {wts_high-wts_low}kg +=-")
+        print() # another?!
     elif args[0] == "reset":
         try:
             data = json.load(open(FP, "r"))
