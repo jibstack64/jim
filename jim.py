@@ -20,6 +20,8 @@ HELP = """help
   -> prints this help string.
 log {calories} [weight (kg)]
   -> associates the current date and time with the calorie count and weight provided.
+remove {date} [time]
+  -> removes all logs on the given date or a log for a specific time on said date.
 read
   -> displays all past data in a pretty format.
 reset
