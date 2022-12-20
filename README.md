@@ -14,8 +14,9 @@ Not meant to be used seriously - use an online service, or something (no, seriou
 ### Arguments
 - `help` -> duh.
 - `log {calories} [weight (kg)]` -> associates the current date and time with the calorie count and weight provided.
+- `remove {date} [time]` -> removes all logs on the given date or a log for a specific time on said date.
 - `read` -> displays all past data in a pretty format.
-- `reset` -> resets all data
+- `reset` -> resets all data.
 
 ### Install
 If you're on *nix (preferably Linux) you can `chmod +x` and run the `install.sh` script.
